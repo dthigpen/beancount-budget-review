@@ -1,4 +1,4 @@
-# budget-review
+# beancount-budget-review
 
 An opinionated tool for reviewing Beancount expenses against budget envelopes.
 
@@ -7,8 +7,8 @@ An opinionated tool for reviewing Beancount expenses against budget envelopes.
 ### CLI
 
 ```bash
-budget-review --budget budget.json --ledger ledger.bean
-budget-review --budget budget.json --ledger ledger.bean --show-excluded
+beancount-budget-review --budget budget.json --ledger ledger.bean
+beancount-budget-review --budget budget.json --ledger ledger.bean --show-excluded
 ```
 
 The `--show-excluded` flag displays transactions that fall outside the budget period.
@@ -92,7 +92,7 @@ Expense matching priority:
 ### Python API
 
 ```python
-from budget_review import review_budget, print_budget_report
+from beancount_budget_review import review_budget, print_budget_report
 
 result = review_budget(
     budget_path="budget.json",

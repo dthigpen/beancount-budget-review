@@ -1,5 +1,5 @@
 
-# src/budget_review/__main__.py
+# src/beancount_budget_review/__main__.py
 
 from .cli import main
 

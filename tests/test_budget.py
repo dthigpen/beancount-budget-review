@@ -7,7 +7,7 @@ from beancount.core.data import Transaction, Posting, TxnPosting
 from beancount.core.amount import Amount
 from beancount.core.number import MISSING
 
-from budget_review.budget import (
+from beancount_budget_review.budget import (
     allocate_budget_expenses,
     BudgetExpense,
     expense_in_budget_period,
@@ -222,7 +222,7 @@ class TestExpenseInBudgetPeriod:
 
     def test_expense_in_period(self):
         """Expense date falls within budget period."""
-        from budget_review.budget import BudgetConfig
+        from beancount_budget_review.budget import BudgetConfig
 
         budget = BudgetConfig(
             envelopes={},
@@ -240,7 +240,7 @@ class TestExpenseInBudgetPeriod:
 
     def test_expense_before_period(self):
         """Expense date before budget period."""
-        from budget_review.budget import BudgetConfig
+        from beancount_budget_review.budget import BudgetConfig
 
         budget = BudgetConfig(
             envelopes={},
@@ -258,7 +258,7 @@ class TestExpenseInBudgetPeriod:
 
     def test_expense_after_period(self):
         """Expense date after budget period."""
-        from budget_review.budget import BudgetConfig
+        from beancount_budget_review.budget import BudgetConfig
 
         budget = BudgetConfig(
             envelopes={},
@@ -276,7 +276,7 @@ class TestExpenseInBudgetPeriod:
 
     def test_expense_on_start_date(self):
         """Expense on the start date is included."""
-        from budget_review.budget import BudgetConfig
+        from beancount_budget_review.budget import BudgetConfig
 
         budget = BudgetConfig(
             envelopes={},
@@ -294,7 +294,7 @@ class TestExpenseInBudgetPeriod:
 
     def test_expense_on_end_date(self):
         """Expense on the end date is included."""
-        from budget_review.budget import BudgetConfig
+        from beancount_budget_review.budget import BudgetConfig
 
         budget = BudgetConfig(
             envelopes={},
@@ -312,7 +312,7 @@ class TestExpenseInBudgetPeriod:
 
     def test_funding_account_not_in_budget(self):
         """Funding account not defined in budget configuration."""
-        from budget_review.budget import BudgetConfig
+        from beancount_budget_review.budget import BudgetConfig
 
         budget = BudgetConfig(
             envelopes={},
@@ -330,7 +330,7 @@ class TestExpenseInBudgetPeriod:
 
     def test_expense_in_budget_period_with_budget_config(self):
         """Test with BudgetConfig TypedDict structure."""
-        from budget_review.budget import BudgetConfig
+        from beancount_budget_review.budget import BudgetConfig
 
         budget = BudgetConfig(
             envelopes={},
@@ -348,7 +348,7 @@ class TestExpenseInBudgetPeriod:
 
     def test_calendar_month_mode_expense_in_period(self):
         """Calendar-month mode includes expenses in overall period."""
-        from budget_review.budget import BudgetConfig
+        from beancount_budget_review.budget import BudgetConfig
 
         budget = BudgetConfig(
             envelopes={},
@@ -364,7 +364,7 @@ class TestExpenseInBudgetPeriod:
 
     def test_calendar_month_mode_expense_outside_period(self):
         """Calendar-month mode excludes expenses outside overall period."""
-        from budget_review.budget import BudgetConfig
+        from beancount_budget_review.budget import BudgetConfig
 
         budget = BudgetConfig(
             envelopes={},
@@ -380,7 +380,7 @@ class TestExpenseInBudgetPeriod:
 
     def test_multiple_accounts(self):
         """Correctly filters based on specific funding account."""
-        from budget_review.budget import BudgetConfig
+        from beancount_budget_review.budget import BudgetConfig
 
         budget = BudgetConfig(
             envelopes={},

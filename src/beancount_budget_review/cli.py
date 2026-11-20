@@ -1,5 +1,5 @@
 
-# src/budget_review/cli.py
+# src/beancount_budget_review/cli.py
 
 import argparse
 from pathlib import Path

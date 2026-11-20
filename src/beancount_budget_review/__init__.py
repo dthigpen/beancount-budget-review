@@ -1,5 +1,5 @@
 
-# src/budget_review/__init__.py
+# src/beancount_budget_review/__init__.py
 
 from .budget import (
     run,
